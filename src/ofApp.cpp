@@ -3,32 +3,39 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+
+	// Loading soundtrack
 	soundTrack.load("sounds/spy_short.mp3");
 	soundTrack.play();
-	white.load("images/7.jpg");
+	
+
+	// Loading images.
 	for(int i=0; i < 6;i++){
 		fileName = "images/" + to_string(i) + ".jpg";
 		img.load(fileName);
 		images.push_back(img);
 	}
 
+	// Loading references texts, to delete
 	textsReferenceTemps.loadFont("arial.ttf", 32);
 	textsReferenceBands.loadFont("arial.ttf",8);
 
+	// *****************************************************************
 	// the fft needs to be smoothed out, so we create an array of floats
 	// for that purpose:
 	fftSmoothed = new float[8192];
 	for (int i = 0; i < 8192; i++){
 		fftSmoothed[i] = 0;
-	}
-	
+	}	
 	nBandsToGet = 3;
+	// ***************************************************************//
 
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
 	ofBackground(0);
+
 	// grab the fft, and put in into a "smoothed" array,
 	// by taking maximums, as peaks and then smoothing downward
 	float * val = ofSoundGetSpectrum(nBandsToGet);		// request 128 values for fft
@@ -41,7 +48,7 @@ void ofApp::update(){
 		if (fftSmoothed[i] < val[i]) fftSmoothed[i] = val[i];
 		
 	}
-
+	if(timer--<=0)timer=5;
 
 }
 
@@ -54,14 +61,14 @@ void ofApp::draw(){
 	float alpha = ofRandom(-1, 1);
 	
 	// référence: Premier changement: 21.5%
-	if(soundTrack.getPosition() >= 0.219 && soundTrack.getPosition() < 0.469){
-		textsReferenceTemps.drawString("OK", 100, 200);
-		if(iterator>=6)iterator=1;
-		images[iterator++].draw(0, 0);
+	if(soundTrack.getPosition() >= 0.219 && soundTrack.getPosition() < 0.469 && timer == 0){
+		// textsReferenceTemps.drawString("OK", 100, 200);
+		// if(iterator>=6)iterator=1;
+		images[ofRandom(floor(0),floor(6))].draw(0, 0);
 	}
 	// référence: Premier changement: 21.5%
 	if(soundTrack.getPosition() >= 0.469){
-		textsReferenceTemps.drawString("OK2", 100, 200);
+		// textsReferenceTemps.drawString("OK2", 100, 200);
 
 	}		
 
@@ -77,7 +84,7 @@ void ofApp::draw(){
 		ofDrawLine(ofGetWidth()/2, 0, (ofGetWidth()/2) + fftSmoothed[0]*100*alpha, (ofGetHeight()/2) + fftSmoothed[1]*100*alpha);
 	}
 
-	textsReferenceBands.drawString(to_string(fftSmoothed[1]), 100, 300);
+	// textsReferenceBands.drawString(to_string(fftSmoothed[1]), 100, 300);
 
 
 }

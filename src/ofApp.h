@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -44,5 +45,8 @@ class ofApp : public ofBaseApp{
 		ofSoundPlayer soundTrack;
 		float * fftSmoothed;
 		int nBandsToGet;
+
+		int timer = 10;
+
 };
 

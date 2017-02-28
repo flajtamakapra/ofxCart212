@@ -347,7 +347,18 @@ obj/linux64/Release/src/main.o: \
  /home/maxpower/Dev/openFrameworks/libs/openFrameworks/video/ofGstVideoPlayer.h \
  /home/maxpower/Dev/openFrameworks/libs/openFrameworks/3d/ofCamera.h \
  /home/maxpower/Dev/openFrameworks/libs/openFrameworks/3d/ofEasyCam.h \
- /home/maxpower/Dev/openFrameworks/apps/myApps/cart212_p2/src/ofApp.h
+ /home/maxpower/Dev/openFrameworks/apps/myApps/cart212_p2/src/ofApp.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxOpenCv.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvConstants.h \
+ /usr/include/opencv/cv.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvImage.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvBlob.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvColorImage.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvFloatImage.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvShortImage.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvContourFinder.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h
 
 /home/maxpower/Dev/openFrameworks/libs/openFrameworks/ofMain.h:
 
@@ -1078,3 +1089,25 @@ obj/linux64/Release/src/main.o: \
 /home/maxpower/Dev/openFrameworks/libs/openFrameworks/3d/ofEasyCam.h:
 
 /home/maxpower/Dev/openFrameworks/apps/myApps/cart212_p2/src/ofApp.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxOpenCv.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvConstants.h:
+
+/usr/include/opencv/cv.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvImage.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvBlob.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvColorImage.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvFloatImage.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvShortImage.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvContourFinder.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h:

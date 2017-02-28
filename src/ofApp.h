@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxOpenCv.h"
 #include <iostream>
 #include <stdio.h>
 #include <vector>
@@ -29,13 +30,16 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+		void loopPictureSet(vector<ofImage> &imgSet, int action);
+
 		
 
 		vector<ofImage> images;
-		ofImage img;
+		vector<ofImage> images2;
+		vector<ofImage> images3;
 		ofImage white;
 		int iterator = 0;
-		string fileName;
+		int currRdmFrame;
 
 		// Texts
 		ofTrueTypeFont textsReferenceTemps;
@@ -46,7 +50,23 @@ class ofApp : public ofBaseApp{
 		float * fftSmoothed;
 		int nBandsToGet;
 
+		// Video utilities
+		ofVideoPlayer vid;
+
 		int timer = 10;
+
+
+		// openCV Bob detection
+        ofxCvColorImage			colorImg;
+
+        ofxCvGrayscaleImage 	grayImage;
+		ofxCvGrayscaleImage 	grayBg;
+		ofxCvGrayscaleImage 	grayDiff;
+
+        ofxCvContourFinder 	contourFinder;
+
+		int 				threshold;
+		bool				bLearnBakground;
 
 };
 

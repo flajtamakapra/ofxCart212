@@ -71,9 +71,12 @@ sftp-config.json
 ehthumbs.db
 Thumbs.db
 
-# Result media files #
-######################
+# Result and sources media files #
+##################################
 *.txt
 *.wav
 *.mp3
 *.jpg
+*.mov
+*.mp4
+*.mpg

@@ -358,7 +358,10 @@ obj/linux64/Release/src/main.o: \
  /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvFloatImage.h \
  /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvShortImage.h \
  /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvContourFinder.h \
- /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h
+ /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h \
+ /home/maxpower/Dev/openFrameworks/addons/ofxVideoRecorder/src/ofxVideoRecorder.h \
+ /home/maxpower/Dev/openFrameworks/libs/poco/include/Poco/Condition.h \
+ /home/maxpower/Dev/openFrameworks/libs/poco/include/Poco/ScopedUnlock.h
 
 /home/maxpower/Dev/openFrameworks/libs/openFrameworks/ofMain.h:
 
@@ -1111,3 +1114,9 @@ obj/linux64/Release/src/main.o: \
 /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvContourFinder.h:
 
 /home/maxpower/Dev/openFrameworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h:
+
+/home/maxpower/Dev/openFrameworks/addons/ofxVideoRecorder/src/ofxVideoRecorder.h:
+
+/home/maxpower/Dev/openFrameworks/libs/poco/include/Poco/Condition.h:
+
+/home/maxpower/Dev/openFrameworks/libs/poco/include/Poco/ScopedUnlock.h:

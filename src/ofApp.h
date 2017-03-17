@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
+#include "ofxVideoRecorder.h"
 #include <iostream>
 #include <stdio.h>
 #include <vector>
@@ -31,15 +32,19 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		void loopPictureSet(vector<ofImage> &imgSet, int action);
-
+		void flashPictures(ofImage img);
+		int randomFromSound(int, int);
 		
 
 		vector<ofImage> images;
 		vector<ofImage> images2;
-		vector<ofImage> images3;
-		ofImage white;
+		vector<ofImage> silouhettes;
+		vector<ofImage> squareLegs;
+
+		ofImage white, flashImg, redLight, intro1, intro2;
 		int iterator = 0;
-		int currRdmFrame;
+		int currRdmFrame, it;
+		int down = 255;
 
 		// Texts
 		ofTrueTypeFont textsReferenceTemps;
@@ -52,11 +57,11 @@ class ofApp : public ofBaseApp{
 
 		// Video utilities
 		ofVideoPlayer vid;
-
+		int alphaLines = 255;
 		int timer = 10;
 
 
-		// openCV Bob detection
+		// openCV Blob detection
         ofxCvColorImage			colorImg;
 
         ofxCvGrayscaleImage 	grayImage;
